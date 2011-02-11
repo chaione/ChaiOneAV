@@ -12,12 +12,12 @@
 #import "CHOffscreenMediaPlayerView.h"
 
 @interface CHMediaViewController : UIViewController {
-	id<CHMediaItem> _model;
+	id<CHMediaItem> _mediaItem;
 	MPMoviePlayerController *_player;
 	UIWindow *_mirroredWindow;
 	UIScreen *_mirroredScreen;
 	CHOffscreenMediaPlayerView *_offscreenView;
 }
-@property (nonatomic, retain) id<CHMediaItem> content;
-- (void)displayContent:(id<CHMediaItem>) content;
+@property (nonatomic, retain) id<CHMediaItem> mediaItem;
+
 @end

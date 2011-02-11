@@ -12,7 +12,7 @@
 #import "UIApplication+ScreenMirroring.h"
 
 @implementation CHMediaViewController
-@synthesize content=_model;
+@synthesize mediaItem;
 
 - (void)playStop {
 	if(_player.currentPlaybackRate == 0.0){
@@ -89,8 +89,7 @@
 }
 
 - (void)setupMediaPlayerView {
-	
-	NSURL *url = [[[NSURL alloc]initFileURLWithPath:_model.path] autorelease];
+	NSURL *url = [[[NSURL alloc]initFileURLWithPath:self.mediaItem.path] autorelease];
 	_player = [[MPMoviePlayerController alloc] initWithContentURL:url];
 	[_player setShouldAutoplay:NO];
 	[_player setFullscreen:YES animated:YES];
@@ -101,31 +100,30 @@
 	} else {
 		self.view = _player.view;
 	}
-	
 }
 
 - (void)setupPDFView {
 	UIWebView *web = [[UIWebView alloc] init];
-	NSData *pdfData = [[NSFileManager defaultManager] contentsAtPath:_model.path];
-	[web loadData:pdfData MIMEType:@"application/pdf" textEncodingName:@"UTF-8" baseURL:[NSURL URLWithString:_model.path]];
+	NSData *pdfData = [[NSFileManager defaultManager] contentsAtPath:self.mediaItem.path];
+	[web loadData:pdfData MIMEType:@"application/pdf" textEncodingName:@"UTF-8" baseURL:[NSURL URLWithString:self.mediaItem.path]];
 	self.view = web;
 	if ([self isConnectedToScreen]) {
 		//Need to hook in our new PDF view here.
 		[[UIApplication sharedApplication] setupScreenMirroringWithFramesPerSecond:ScreenMirroringDefaultFramesPerSecond];	
 	}
 }
-
-- (void)displayContent:(id<CHMediaItem>) content {
-	if(!_model) {
-		_model = nil;
-	}
-	_model = content;
-	
-	if ([_model.mimeType isEqualToString:@"PDF"]) {
+- (void)refreshView {	
+	if ([self.mediaItem.mimeType isEqualToString:@"PDF"]) {
 		[self setupPDFView];
 	} else {
 		[self setupMediaPlayerView];
 	}
+}
+
+- (void)setMediaItem:(id <CHMediaItem>)value {
+	_mediaItem = value;
+	[self refreshView];
+	[self.view setNeedsDisplay];
 }
 
 - (void)viewDidLoad {
@@ -151,7 +149,8 @@
 }
 
 - (void)dealloc {
-	_model = nil;
+	self.mediaItem = nil;
+	
 	if(_player) {
 		[_player release];
 		_player = nil;
