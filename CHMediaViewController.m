@@ -82,6 +82,7 @@
 				[self setupMirroringForScreen:aScreen];
 				_player.view.frame = _mirroredWindow.frame;
 				[_mirroredWindow addSubview:_player.view];
+				[_player play];
 				break;
 			}
 		}
@@ -107,10 +108,10 @@
 	NSData *pdfData = [[NSFileManager defaultManager] contentsAtPath:self.mediaItem.path];
 	[web loadData:pdfData MIMEType:@"application/pdf" textEncodingName:@"UTF-8" baseURL:[NSURL URLWithString:self.mediaItem.path]];
 	self.view = web;
-	if ([self isConnectedToScreen]) {
-		//Need to hook in our new PDF view here.
-		[[UIApplication sharedApplication] setupScreenMirroringWithFramesPerSecond:ScreenMirroringDefaultFramesPerSecond];	
-	}
+//	if ([self isConnectedToScreen]) {
+//		//Need to hook in our new PDF view here.
+//		[[UIApplication sharedApplication] setupScreenMirroringWithFramesPerSecond:ScreenMirroringDefaultFramesPerSecond];	
+//	}
 }
 - (void)refreshView {	
 	if ([self.mediaItem.mimeType isEqualToString:@"application/pdf"]) {
