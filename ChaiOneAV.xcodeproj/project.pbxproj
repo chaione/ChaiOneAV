@@ -1,0 +1,272 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 45;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0A0FE547130598240008A0B3 /* CHMediaItem.h in Headers */ = {isa = PBXBuildFile; fileRef = 0A0FE544130598240008A0B3 /* CHMediaItem.h */; };
+		0A0FE548130598240008A0B3 /* CHMediaViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 0A0FE545130598240008A0B3 /* CHMediaViewController.h */; };
+		0A0FE549130598240008A0B3 /* CHMediaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A0FE546130598240008A0B3 /* CHMediaViewController.m */; };
+		0A0FE54D1305984D0008A0B3 /* UIApplication+ScreenMirroring.h in Headers */ = {isa = PBXBuildFile; fileRef = 0A0FE54B1305984D0008A0B3 /* UIApplication+ScreenMirroring.h */; };
+		0A0FE54E1305984D0008A0B3 /* UIApplication+ScreenMirroring.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A0FE54C1305984D0008A0B3 /* UIApplication+ScreenMirroring.m */; };
+		0A0FE5BB1305A9A20008A0B3 /* CHOffscreenMediaPlayerView.h in Headers */ = {isa = PBXBuildFile; fileRef = 0A0FE5B91305A9A20008A0B3 /* CHOffscreenMediaPlayerView.h */; };
+		0A0FE5BC1305A9A20008A0B3 /* CHOffscreenMediaPlayerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A0FE5BA1305A9A20008A0B3 /* CHOffscreenMediaPlayerView.m */; };
+		AA747D9F0F9514B9006C5449 /* ChaiOneAV_Prefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = AA747D9E0F9514B9006C5449 /* ChaiOneAV_Prefix.pch */; };
+		AACBBE4A0F95108600F1A2B1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AACBBE490F95108600F1A2B1 /* Foundation.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		0A0FE544130598240008A0B3 /* CHMediaItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CHMediaItem.h; path = ../CHMediaItem.h; sourceTree = "<group>"; };
+		0A0FE545130598240008A0B3 /* CHMediaViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CHMediaViewController.h; path = ../CHMediaViewController.h; sourceTree = "<group>"; };
+		0A0FE546130598240008A0B3 /* CHMediaViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CHMediaViewController.m; path = ../CHMediaViewController.m; sourceTree = "<group>"; };
+		0A0FE54B1305984D0008A0B3 /* UIApplication+ScreenMirroring.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIApplication+ScreenMirroring.h"; sourceTree = "<group>"; };
+		0A0FE54C1305984D0008A0B3 /* UIApplication+ScreenMirroring.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIApplication+ScreenMirroring.m"; sourceTree = "<group>"; };
+		0A0FE5B91305A9A20008A0B3 /* CHOffscreenMediaPlayerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHOffscreenMediaPlayerView.h; sourceTree = "<group>"; };
+		0A0FE5BA1305A9A20008A0B3 /* CHOffscreenMediaPlayerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHOffscreenMediaPlayerView.m; sourceTree = "<group>"; };
+		AA747D9E0F9514B9006C5449 /* ChaiOneAV_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChaiOneAV_Prefix.pch; sourceTree = SOURCE_ROOT; };
+		AACBBE490F95108600F1A2B1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		D2AAC07E0554694100DB518D /* libChaiOneAV.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libChaiOneAV.a; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D2AAC07C0554694100DB518D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AACBBE4A0F95108600F1A2B1 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		034768DFFF38A50411DB9C8B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D2AAC07E0554694100DB518D /* libChaiOneAV.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		0867D691FE84028FC02AAC07 /* ChaiOneAV */ = {
+			isa = PBXGroup;
+			children = (
+				0A0FE54A1305984D0008A0B3 /* External */,
+				08FB77AEFE84172EC02AAC07 /* Classes */,
+				32C88DFF0371C24200C91783 /* Other Sources */,
+				0867D69AFE84028FC02AAC07 /* Frameworks */,
+				034768DFFF38A50411DB9C8B /* Products */,
+			);
+			name = ChaiOneAV;
+			sourceTree = "<group>";
+		};
+		0867D69AFE84028FC02AAC07 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AACBBE490F95108600F1A2B1 /* Foundation.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		08FB77AEFE84172EC02AAC07 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				0A0FE5B81305A9500008A0B3 /* Media Views */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		0A0FE54A1305984D0008A0B3 /* External */ = {
+			isa = PBXGroup;
+			children = (
+				0A0FE54B1305984D0008A0B3 /* UIApplication+ScreenMirroring.h */,
+				0A0FE54C1305984D0008A0B3 /* UIApplication+ScreenMirroring.m */,
+			);
+			path = External;
+			sourceTree = "<group>";
+		};
+		0A0FE5B81305A9500008A0B3 /* Media Views */ = {
+			isa = PBXGroup;
+			children = (
+				0A0FE544130598240008A0B3 /* CHMediaItem.h */,
+				0A0FE545130598240008A0B3 /* CHMediaViewController.h */,
+				0A0FE546130598240008A0B3 /* CHMediaViewController.m */,
+				0A0FE5B91305A9A20008A0B3 /* CHOffscreenMediaPlayerView.h */,
+				0A0FE5BA1305A9A20008A0B3 /* CHOffscreenMediaPlayerView.m */,
+			);
+			path = "Media Views";
+			sourceTree = "<group>";
+		};
+		32C88DFF0371C24200C91783 /* Other Sources */ = {
+			isa = PBXGroup;
+			children = (
+				AA747D9E0F9514B9006C5449 /* ChaiOneAV_Prefix.pch */,
+			);
+			name = "Other Sources";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		D2AAC07A0554694100DB518D /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AA747D9F0F9514B9006C5449 /* ChaiOneAV_Prefix.pch in Headers */,
+				0A0FE547130598240008A0B3 /* CHMediaItem.h in Headers */,
+				0A0FE548130598240008A0B3 /* CHMediaViewController.h in Headers */,
+				0A0FE54D1305984D0008A0B3 /* UIApplication+ScreenMirroring.h in Headers */,
+				0A0FE5BB1305A9A20008A0B3 /* CHOffscreenMediaPlayerView.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		D2AAC07D0554694100DB518D /* ChaiOneAV */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1DEB921E08733DC00010E9CD /* Build configuration list for PBXNativeTarget "ChaiOneAV" */;
+			buildPhases = (
+				D2AAC07A0554694100DB518D /* Headers */,
+				D2AAC07B0554694100DB518D /* Sources */,
+				D2AAC07C0554694100DB518D /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ChaiOneAV;
+			productName = ChaiOneAV;
+			productReference = D2AAC07E0554694100DB518D /* libChaiOneAV.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		0867D690FE84028FC02AAC07 /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = 1DEB922208733DC00010E9CD /* Build configuration list for PBXProject "ChaiOneAV" */;
+			compatibilityVersion = "Xcode 3.1";
+			developmentRegion = English;
+			hasScannedForEncodings = 1;
+			knownRegions = (
+				English,
+				Japanese,
+				French,
+				German,
+			);
+			mainGroup = 0867D691FE84028FC02AAC07 /* ChaiOneAV */;
+			productRefGroup = 034768DFFF38A50411DB9C8B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D2AAC07D0554694100DB518D /* ChaiOneAV */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D2AAC07B0554694100DB518D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0A0FE549130598240008A0B3 /* CHMediaViewController.m in Sources */,
+				0A0FE54E1305984D0008A0B3 /* UIApplication+ScreenMirroring.m in Sources */,
+				0A0FE5BC1305A9A20008A0B3 /* CHOffscreenMediaPlayerView.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		1DEB921F08733DC00010E9CD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				COPY_PHASE_STRIP = NO;
+				DSTROOT = /tmp/ChaiOneAV.dst;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = ChaiOneAV_Prefix.pch;
+				INSTALL_PATH = /usr/local/lib;
+				PRODUCT_NAME = ChaiOneAV;
+			};
+			name = Debug;
+		};
+		1DEB922008733DC00010E9CD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				DSTROOT = /tmp/ChaiOneAV.dst;
+				GCC_MODEL_TUNING = G5;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = ChaiOneAV_Prefix.pch;
+				INSTALL_PATH = /usr/local/lib;
+				PRODUCT_NAME = ChaiOneAV;
+			};
+			name = Release;
+		};
+		1DEB922308733DC00010E9CD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				OTHER_LDFLAGS = "-ObjC";
+				PREBINDING = NO;
+				PROVISIONING_PROFILE = "";
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		1DEB922408733DC00010E9CD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				OTHER_LDFLAGS = "-ObjC";
+				PREBINDING = NO;
+				PROVISIONING_PROFILE = "";
+				SDKROOT = iphoneos;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1DEB921E08733DC00010E9CD /* Build configuration list for PBXNativeTarget "ChaiOneAV" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1DEB921F08733DC00010E9CD /* Debug */,
+				1DEB922008733DC00010E9CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1DEB922208733DC00010E9CD /* Build configuration list for PBXProject "ChaiOneAV" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1DEB922308733DC00010E9CD /* Debug */,
+				1DEB922408733DC00010E9CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 0867D690FE84028FC02AAC07 /* Project object */;
+}
