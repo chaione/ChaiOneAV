@@ -89,8 +89,8 @@
 }
 
 - (void)setupMediaPlayerView {
-	NSString *path =[[NSBundle mainBundle] pathForResource:@"3" ofType:@"mp4"];
-	NSURL *url = [[[NSURL alloc]initFileURLWithPath:path] autorelease];
+	
+	NSURL *url = [[[NSURL alloc]initFileURLWithPath:_model.path] autorelease];
 	_player = [[MPMoviePlayerController alloc] initWithContentURL:url];
 	[_player setShouldAutoplay:NO];
 	[_player setFullscreen:YES animated:YES];
@@ -106,11 +106,9 @@
 
 - (void)setupPDFView {
 	UIWebView *web = [[UIWebView alloc] init];
-	NSString *path = [[NSBundle mainBundle] pathForResource:@"1" ofType:@"pdf"];
-	NSData *pdfData = [[NSFileManager defaultManager] contentsAtPath:path];
-	[web loadData:pdfData MIMEType:@"application/pdf" textEncodingName:@"UTF-8" baseURL:[NSURL URLWithString:path]];
+	NSData *pdfData = [[NSFileManager defaultManager] contentsAtPath:_model.path];
+	[web loadData:pdfData MIMEType:@"application/pdf" textEncodingName:@"UTF-8" baseURL:[NSURL URLWithString:_model.path]];
 	self.view = web;
-
 	if ([self isConnectedToScreen]) {
 		//Need to hook in our new PDF view here.
 		[[UIApplication sharedApplication] setupScreenMirroringWithFramesPerSecond:ScreenMirroringDefaultFramesPerSecond];	

@@ -11,8 +11,8 @@
 
 @protocol CHMediaItem
 
-@property (nonatomic, copy) NSString * mimeType;
-@property (nonatomic, copy) NSString * path;
-@property (nonatomic, copy) NSString * thumbPath;
+@property (nonatomic, readonly, copy) NSString * mimeType;
+@property (nonatomic, readonly, copy) NSString * path;
+@property (nonatomic, readonly, copy) NSString * thumbPath;
 
 @end
