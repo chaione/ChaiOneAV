@@ -12,7 +12,7 @@
 #import "UIApplication+ScreenMirroring.h"
 
 @implementation CHMediaViewController
-@synthesize mediaItem;
+@synthesize mediaItem =_mediaItem;
 
 - (void)playStop {
 	if(_player.currentPlaybackRate == 0.0){
