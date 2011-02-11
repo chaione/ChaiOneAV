@@ -12,7 +12,7 @@
 #import "UIApplication+ScreenMirroring.h"
 
 @implementation CHMediaViewController
-@synthesize mediaItem =_mediaItem;
+@synthesize mediaItem = _mediaItem;
 
 - (void)playStop {
 	if(_player.currentPlaybackRate == 0.0){
@@ -122,7 +122,8 @@
 }
 
 - (void)setMediaItem:(id <CHMediaItem>)value {
-	_mediaItem = value;
+	[(id)_mediaItem release];
+	_mediaItem = [(id)value retain];
 	[self refreshView];
 	[self.view setNeedsDisplay];
 }
