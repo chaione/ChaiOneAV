@@ -105,7 +105,7 @@
 
 - (void)setupPDFView {
 	UIWebView *web = [[UIWebView alloc] init];
-	NSData *pdfData = [[NSFileManager defaultManager] contentsAtPath:self.mediaItem.path];
+	NSData *pdfData = [[NSFileManager defaultManager] contentsAtPath:[NSURL URLWithString:self.mediaItem.path]];
 	[web loadData:pdfData MIMEType:@"application/pdf" textEncodingName:@"UTF-8" baseURL:[NSURL URLWithString:self.mediaItem.path]];
 	self.view = web;
 //	if ([self isConnectedToScreen]) {
