@@ -113,7 +113,7 @@
 	}
 }
 - (void)refreshView {	
-	if ([self.mediaItem.mimeType isEqualToString:@"PDF"]) {
+	if ([self.mediaItem.mimeType isEqualToString:@"application/pdf"]) {
 		[self setupPDFView];
 	} else {
 		[self setupMediaPlayerView];
