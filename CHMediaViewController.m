@@ -150,7 +150,9 @@
 }
 
 - (void)dealloc {
-	self.mediaItem = nil;
+	if (_mediaItem) {
+		_mediaItem = nil;	
+	}
 	
 	if(_player) {
 		[_player release];
