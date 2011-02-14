@@ -104,22 +104,24 @@
 }
 
 - (void)setupPDFView {
-	UIWebView *web				= [[UIWebView alloc] init];
+	
+	[_webView release];
+	_webView					= [[UIWebView alloc] init];
+	
 	NSURL* pdfURL				= [[[NSURL alloc] initFileURLWithPath:self.mediaItem.path] autorelease];
 	NSURLRequest* pdfRequest	= [NSURLRequest requestWithURL:pdfURL];
 	
-	[web setScalesPageToFit:YES];
-	[web loadRequest:pdfRequest];
+	[_webView setScalesPageToFit:YES];
+	[_webView loadRequest:pdfRequest];
 	
 	//NSData *pdfData = [[NSData alloc] initWithContentsOfURL:[NSURL URLWithString:self.mediaItem.path]];
 	//[web loadData:pdfData MIMEType:@"application/pdf" textEncodingName:@"UTF-8" baseURL:[NSURL URLWithString:self.mediaItem.path]];
 
-	self.view = web;
+	self.view = _webView;
 	
-	//	if ([self isConnectedToScreen]) {
-	//		//Need to hook in our new PDF view here.
-	//		[[UIApplication sharedApplication] setupScreenMirroringWithFramesPerSecond:ScreenMirroringDefaultFramesPerSecond];	
-	//	}
+	if ([self isConnectedToScreen]) {
+		;
+	}
 }
 - (void)refreshView {	
 	if ([self.mediaItem.mimeType isEqualToString:@"application/pdf"]) {
@@ -159,6 +161,8 @@
 }
 
 - (void)dealloc {
+	[_webView release];
+	
 	if (_mediaItem) {
 		_mediaItem = nil;	
 	}
