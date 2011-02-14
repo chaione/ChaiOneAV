@@ -108,6 +108,7 @@
 	NSURL* pdfURL				= [[[NSURL alloc] initFileURLWithPath:self.mediaItem.path] autorelease];
 	NSURLRequest* pdfRequest	= [NSURLRequest requestWithURL:pdfURL];
 	
+	[web setScalesPageToFit:YES];
 	[web loadRequest:pdfRequest];
 	
 	//NSData *pdfData = [[NSData alloc] initWithContentsOfURL:[NSURL URLWithString:self.mediaItem.path]];
