@@ -30,7 +30,7 @@
 extern NSString * const UIApplicationDidSetupScreenMirroringNotification;
 extern NSString * const UIApplicationDidDisableScreenMirroringNotification;
 
-static const NSUInteger ScreenMirroringDefaultFramesPerSecond = 60;
+static const NSUInteger ScreenMirroringDefaultFramesPerSecond = 15;
 
 @interface UIApplication (ScreenMirroring)
 

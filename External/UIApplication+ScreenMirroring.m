@@ -46,16 +46,18 @@ static NSUInteger frames = 0;
 - (void) setupMirroringForScreen:(UIScreen *)anExternalScreen;
 - (void) disableMirroringOnCurrentScreen;
 - (void) updateMirroredScreenOnDisplayLink;
+- (void) updatedMirroredScreenLoop;
 
 @end
 
 @implementation UIApplication (ScreenMirroring)
 
-static double targetFramesPerSecond = 60;
+static double targetFramesPerSecond = 0;
 static CADisplayLink *displayLink = nil;
 static UIScreen *mirroredScreen = nil;
 static UIWindow *mirroredScreenWindow = nil;
 static UIImageView *mirroredImageView = nil;
+static BOOL done = NO;
 
 - (BOOL) isScreenMirroringActive
 {
@@ -223,11 +225,16 @@ static UIImageView *mirroredImageView = nil;
 	// Setup display link sync
 	displayLink = [[CADisplayLink displayLinkWithTarget:self selector:@selector(updateMirroredScreenOnDisplayLink)] retain];
 	[displayLink setFrameInterval:(targetFramesPerSecond >= CORE_ANIMATION_MAX_FRAMES_PER_SECOND) ? 1 : (CORE_ANIMATION_MAX_FRAMES_PER_SECOND / targetFramesPerSecond)];
+	//[displayLink setFrameInterval:2];
+	
+	
+	[NSThread detachNewThreadSelector:@selector(updatedMirroredScreenLoop) toTarget:self withObject:nil];
 	
 	// We MUST add ourselves in the commons run loop in order to mirror during UITrackingRunLoopMode.
 	// Otherwise, the display won't be updated while fingering are touching the screen.
 	// This has a major impact on performance though...
-	[displayLink addToRunLoop:[NSRunLoop currentRunLoop] forMode:NSDefaultRunLoopMode];
+	//[displayLink addToRunLoop:[NSRunLoop currentRunLoop] forMode:NSRunLoopCommonModes];
+	//[displayLink addToRunLoop:[NSRunLoop currentRunLoop] forMode:UITrackingRunLoopMode];
 	
 	// Post notification advertisting that we're setting up mirroring for the external screen
 	[[NSNotificationCenter defaultCenter] postNotificationName:UIApplicationDidSetupScreenMirroringNotification object:anExternalScreen];
@@ -235,6 +242,9 @@ static UIImageView *mirroredImageView = nil;
 
 - (void) disableMirroringOnCurrentScreen
 {
+	
+	done = YES;
+	
 	// Post notification advertisting that we're tearing down mirroring
 	[[NSNotificationCenter defaultCenter] postNotificationName:UIApplicationDidDisableScreenMirroringNotification object:mirroredScreen];
 	
@@ -253,10 +263,28 @@ static UIImageView *mirroredImageView = nil;
 	if (mainWindowScreenshot) {
 		// Copy to secondary screen
 		mirroredScreenWindow.layer.contents = (id) mainWindowScreenshot;
-		
 		// Clean up as UIGetScreenImage does NOT respect retain / release semantics
 		CFRelease(mainWindowScreenshot); 
 	}
+	
+	// TODO: Instead of mirroring the app, put up a placeholder image
+}
+
+- (void) updatedMirroredScreenLoop {
+	NSAutoreleasePool *pool = [[NSAutoreleasePool alloc] init];
+	done = NO;
+	
+	NSDate* distantFuture	= [NSDate distantFuture];
+	
+	[displayLink addToRunLoop:[NSRunLoop currentRunLoop] forMode:NSDefaultRunLoopMode];
+	
+	while ( ! done && [[NSRunLoop currentRunLoop] runMode:NSDefaultRunLoopMode beforeDate:distantFuture] )
+	{
+		//[self performSelectorOnMainThread:@selector(updateMirroredScreenOnDisplayLink) withObject:nil waitUntilDone:NO];
+		//[NSThread sleepForTimeInterval: (1.0f/60.0f) ];
+		;
+	}
+	[pool release];
 }
 
 @end
