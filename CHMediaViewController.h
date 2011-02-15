@@ -14,6 +14,7 @@
 @interface CHMediaViewController : UIViewController {
 	id<CHMediaItem> _mediaItem;
 	MPMoviePlayerController *_player;
+	UIWebView* _webView;
 	UIWindow *_mirroredWindow;
 	UIScreen *_mirroredScreen;
 	CHOffscreenMediaPlayerView *_offscreenView;
