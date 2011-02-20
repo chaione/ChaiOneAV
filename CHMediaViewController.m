@@ -14,8 +14,6 @@
 @implementation CHMediaViewController
 @synthesize mediaItem = _mediaItem;
 
-
-
 - (void)setupMediaPlayerView {
 	NSURL *url = [[[NSURL alloc]initFileURLWithPath:self.mediaItem.path] autorelease];
 	
@@ -26,7 +24,6 @@
 	[_player setFullscreen:YES animated:YES];
 	[_player setRepeatMode:MPMovieRepeatModeOne];
 	self.view = _player.view;
-	
 }
 
 - (void)refreshView {	
@@ -83,7 +80,6 @@
 	[_webView release];
 	[(id)_mediaItem release];
 	[_player release];
-	
     [super dealloc];
 }
 

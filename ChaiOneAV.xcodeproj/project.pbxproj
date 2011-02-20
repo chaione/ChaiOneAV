@@ -10,10 +10,10 @@
 		0A0FE547130598240008A0B3 /* CHMediaItem.h in Headers */ = {isa = PBXBuildFile; fileRef = 0A0FE544130598240008A0B3 /* CHMediaItem.h */; };
 		0A0FE548130598240008A0B3 /* CHMediaViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 0A0FE545130598240008A0B3 /* CHMediaViewController.h */; };
 		0A0FE549130598240008A0B3 /* CHMediaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A0FE546130598240008A0B3 /* CHMediaViewController.m */; };
-		0A0FE54D1305984D0008A0B3 /* UIApplication+ScreenMirroring.h in Headers */ = {isa = PBXBuildFile; fileRef = 0A0FE54B1305984D0008A0B3 /* UIApplication+ScreenMirroring.h */; };
-		0A0FE54E1305984D0008A0B3 /* UIApplication+ScreenMirroring.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A0FE54C1305984D0008A0B3 /* UIApplication+ScreenMirroring.m */; };
 		0A0FE5BB1305A9A20008A0B3 /* CHOffscreenMediaPlayerView.h in Headers */ = {isa = PBXBuildFile; fileRef = 0A0FE5B91305A9A20008A0B3 /* CHOffscreenMediaPlayerView.h */; };
 		0A0FE5BC1305A9A20008A0B3 /* CHOffscreenMediaPlayerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A0FE5BA1305A9A20008A0B3 /* CHOffscreenMediaPlayerView.m */; };
+		0AFF1FFF130B2B2C0021D056 /* UIApplication+ScreenMirroring.h in Headers */ = {isa = PBXBuildFile; fileRef = 0AFF1FFD130B2B2C0021D056 /* UIApplication+ScreenMirroring.h */; };
+		0AFF2000130B2B2C0021D056 /* UIApplication+ScreenMirroring.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AFF1FFE130B2B2C0021D056 /* UIApplication+ScreenMirroring.m */; };
 		AA747D9F0F9514B9006C5449 /* ChaiOneAV_Prefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = AA747D9E0F9514B9006C5449 /* ChaiOneAV_Prefix.pch */; };
 		AACBBE4A0F95108600F1A2B1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AACBBE490F95108600F1A2B1 /* Foundation.framework */; };
 /* End PBXBuildFile section */
@@ -22,10 +22,10 @@
 		0A0FE544130598240008A0B3 /* CHMediaItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CHMediaItem.h; path = ../CHMediaItem.h; sourceTree = "<group>"; };
 		0A0FE545130598240008A0B3 /* CHMediaViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CHMediaViewController.h; path = ../CHMediaViewController.h; sourceTree = "<group>"; };
 		0A0FE546130598240008A0B3 /* CHMediaViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CHMediaViewController.m; path = ../CHMediaViewController.m; sourceTree = "<group>"; };
-		0A0FE54B1305984D0008A0B3 /* UIApplication+ScreenMirroring.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIApplication+ScreenMirroring.h"; sourceTree = "<group>"; };
-		0A0FE54C1305984D0008A0B3 /* UIApplication+ScreenMirroring.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIApplication+ScreenMirroring.m"; sourceTree = "<group>"; };
 		0A0FE5B91305A9A20008A0B3 /* CHOffscreenMediaPlayerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHOffscreenMediaPlayerView.h; sourceTree = "<group>"; };
 		0A0FE5BA1305A9A20008A0B3 /* CHOffscreenMediaPlayerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHOffscreenMediaPlayerView.m; sourceTree = "<group>"; };
+		0AFF1FFD130B2B2C0021D056 /* UIApplication+ScreenMirroring.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIApplication+ScreenMirroring.h"; sourceTree = "<group>"; };
+		0AFF1FFE130B2B2C0021D056 /* UIApplication+ScreenMirroring.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIApplication+ScreenMirroring.m"; sourceTree = "<group>"; };
 		AA747D9E0F9514B9006C5449 /* ChaiOneAV_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChaiOneAV_Prefix.pch; sourceTree = SOURCE_ROOT; };
 		AACBBE490F95108600F1A2B1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		D2AAC07E0554694100DB518D /* libChaiOneAV.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libChaiOneAV.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -82,8 +82,8 @@
 		0A0FE54A1305984D0008A0B3 /* External */ = {
 			isa = PBXGroup;
 			children = (
-				0A0FE54B1305984D0008A0B3 /* UIApplication+ScreenMirroring.h */,
-				0A0FE54C1305984D0008A0B3 /* UIApplication+ScreenMirroring.m */,
+				0AFF1FFD130B2B2C0021D056 /* UIApplication+ScreenMirroring.h */,
+				0AFF1FFE130B2B2C0021D056 /* UIApplication+ScreenMirroring.m */,
 			);
 			path = External;
 			sourceTree = "<group>";
@@ -118,8 +118,8 @@
 				AA747D9F0F9514B9006C5449 /* ChaiOneAV_Prefix.pch in Headers */,
 				0A0FE547130598240008A0B3 /* CHMediaItem.h in Headers */,
 				0A0FE548130598240008A0B3 /* CHMediaViewController.h in Headers */,
-				0A0FE54D1305984D0008A0B3 /* UIApplication+ScreenMirroring.h in Headers */,
 				0A0FE5BB1305A9A20008A0B3 /* CHOffscreenMediaPlayerView.h in Headers */,
+				0AFF1FFF130B2B2C0021D056 /* UIApplication+ScreenMirroring.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -174,8 +174,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				0A0FE549130598240008A0B3 /* CHMediaViewController.m in Sources */,
-				0A0FE54E1305984D0008A0B3 /* UIApplication+ScreenMirroring.m in Sources */,
 				0A0FE5BC1305A9A20008A0B3 /* CHOffscreenMediaPlayerView.m in Sources */,
+				0AFF2000130B2B2C0021D056 /* UIApplication+ScreenMirroring.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
